@@ -7,7 +7,10 @@ module.exports = function(defaults) {
     // Add options here
     autoImport: {
       alias: {
-        'pouchdb': 'pouchdb'
+        'pouchdb-memory': 'pouchdb/dist/pouchdb.memory.js'
+      },
+      webpack: {
+        externals: { 'pouchdb': 'PouchDB' }
       }
     }
   });
